@@ -41,11 +41,18 @@
             forElements.appendChild(uiElement)
         });
 
+        function pointing(event) {
+            const target = event.target;
 
-        forElements.addEventListener('mouseover', event => {
-            
+            if(target.classList.contains('item')) {
+                target.children[0].classList.toggle('block')
+            }
+        }
 
-        });
+
+        forElements.addEventListener('mouseover', pointing);
+
+        forElements.addEventListener('mouseout', pointing);
 
     }
 
@@ -61,11 +68,11 @@
         const uiItemCont = document.createElement('div');
         uiItemCont.className = 'item-cont';
 
-        const uiPrice = document.createElement('span');
+        const uiPrice = document.createElement('div');
         uiPrice.classNAme = 'price';
-        uiPrice.textContent = price;
+        uiPrice.textContent = `$${price} Bilion`;
 
-        const uiDate = document.createElement('span');
+        const uiDate = document.createElement('div');
         uiDate.textContent = date;
         uiDate.className = 'date';
 

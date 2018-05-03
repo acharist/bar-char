@@ -26,6 +26,7 @@ body {
     flex-wrap: nowrap;
     background-color: #68BDF8;
     width: 4px;
+    position: relative;
     margin-right: 1px;
     cursor: pointer;
 }
@@ -44,4 +45,17 @@ body {
 
 .item-cont {
     display: none;
+    position: absolute;
+    background-color: #999898;
+    z-index: 2;
+    color: #fff;
+    padding: 10px 8px;
+    top: -40px;
+    right: -130px;
+}
+
+.item-cont div:first-child {
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 1rem;
 }
